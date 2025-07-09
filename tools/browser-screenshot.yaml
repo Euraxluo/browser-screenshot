@@ -1,0 +1,83 @@
+identity:
+  name: browser-screenshot
+  author: euraxluo
+  label:
+    en_US: browser-screenshot
+    zh_Hans: browser-screenshot
+    pt_BR: browser-screenshot
+description:
+  human:
+    en_US: Take a full-page screenshot of the specified website using a local browser (CDP 9222)
+    zh_Hans: 使用本地浏览器（CDP 9222）对指定网址进行全页截图
+    pt_BR: Take a full-page screenshot of the specified website using a local browser (CDP 9222)
+  llm: Take a full-page screenshot of the specified website using a local browser (CDP 9222)
+parameters:
+  - name: url
+    type: string
+    required: true
+    label:
+      en_US: Target URL
+      zh_Hans: 目标网址
+      pt_BR: Target URL
+    human_description:
+      en_US: The website URL to capture a screenshot of (must be accessible from the local browser)
+      zh_Hans: 需要截图的网址（需本地浏览器可访问）
+      pt_BR: The website URL to capture a screenshot of (must be accessible from the local browser)
+    llm_description: The website URL to capture a screenshot of (must be accessible from the local browser)
+    form: llm
+  - name: width
+    type: number
+    required: false
+    label:
+      en_US: Viewport Width
+      zh_Hans: 视口宽度
+      pt_BR: Viewport Width
+    human_description:
+      en_US: The viewport width for the screenshot (default  2200)
+      zh_Hans: 截图时浏览器视口宽度（默认2200）
+      pt_BR: The viewport width for the screenshot (default  2200)
+    llm_description: The viewport width for the screenshot (default 2200)
+    form: form
+  - name: height
+    type: number
+    required: false
+    label:
+      en_US: Viewport Height
+      zh_Hans: 视口高度
+      pt_BR: Viewport Height
+    human_description:
+      en_US: The viewport height for the screenshot (default 8000)
+      zh_Hans: 截图时浏览器视口高度（默认8000）
+      pt_BR: The viewport height for the screenshot (default 8000)
+    llm_description: The viewport height for the screenshot (default 8000)
+    form: form
+  - name: deviceScaleFactor
+    type: number
+    required: false
+    label:
+      en_US: Device Scale Factor
+      zh_Hans: 设备缩放因子
+      pt_BR: Device Scale Factor
+    human_description:
+      en_US: The device scale factor for high-DPI screenshots (default  2.5)
+      zh_Hans: 用于高分辨率截图的设备缩放因子（默认2.5）
+      pt_BR: The device scale factor for high-DPI screenshots (default  2.5)
+    llm_description: The device scale factor for high-DPI screenshots (default 2.5)
+    form: form
+  - name: cdp_url
+    type: string
+    required: false
+    label:
+      en_US: CDP URL
+      zh_Hans: CDP 地址
+      pt_BR: CDP URL
+    human_description:
+      en_US: The Chrome DevTools Protocol URL (default http://localhost:9222, can be set by env BROWSER_CDP_URL)
+      zh_Hans: Chrome DevTools 协议地址（默认 http://localhost:9222，可用环境变量 BROWSER_CDP_URL 配置）
+      pt_BR: The Chrome DevTools Protocol URL (default http://localhost:9222, can be set by env BROWSER_CDP_URL)
+    llm_description: The Chrome DevTools Protocol URL (default http://localhost:9222, can be set by env BROWSER_CDP_URL)
+    form: form
+
+extra:
+  python:
+    source: tools/browser-screenshot.py

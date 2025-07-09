@@ -1,0 +1,17 @@
+identity:
+  author: euraxluo
+  name: browser-screenshot
+  label:
+    en_US: browser-screenshot
+    zh_Hans: browser-screenshot
+    pt_BR: browser-screenshot
+  description:
+    en_US: screenshot use browser
+    zh_Hans: screenshot use browser
+    pt_BR: screenshot use browser
+  icon: icon.svg
+tools:
+  - tools/browser-screenshot.yaml
+extra:
+  python:
+    source: provider/browser-screenshot.py

@@ -1,0 +1,54 @@
+version: 0.0.1
+type: plugin
+author: euraxluo
+name: browser-screenshot
+label:
+  en_US: browser-screenshot
+  ja_JP: browser-screenshot
+  zh_Hans: browser-screenshot
+  pt_BR: browser-screenshot
+description:
+  en_US: screenshot use browser
+  ja_JP: screenshot use browser
+  zh_Hans: screenshot use browser
+  pt_BR: screenshot use browser
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: false
+    model:
+      enabled: false
+      llm: false
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+    node:
+      enabled: false
+    endpoint:
+      enabled: false
+    app:
+      enabled: false
+    storage:
+      enabled: false
+      size: 1024
+plugins:
+  tools:
+    - provider/browser-screenshot.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2025-07-08T16:42:50.648698+08:00
+privacy: PRIVACY.md
+repo: https://github.com/Euraxluo/browser-screenshot.git
+verified: false
